@@ -3,7 +3,8 @@ package main;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void menu(){
+        System.out.println("Kérlek válassz az alábbi forgatókönyvek közül:");
         System.out.println("1. Move 2. Palpate 3. Collect 4. Use agent 5. Make agent 6. Expiring");
         Scanner in = new Scanner(System.in);
         int input = in.nextInt();
@@ -59,9 +60,16 @@ public class Main {
                 String input11 = in.nextLine();
                 break;
         }
-        String input12 = in.nextLine();
-        if(input12.equals("exit")) {
-            System.exit(0);
+    }
+
+    public static void main(String[] args) {
+        int input12 = 0;
+        Scanner in = new Scanner(System.in);
+        while (input12 != 2){
+            menu();
+            System.out.println("1: folytatás, 2: exit");
+            input12 = in.nextInt();
         }
+        System.exit(0);
     }
 }

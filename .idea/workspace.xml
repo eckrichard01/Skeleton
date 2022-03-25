@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb850aa0-fc08-42db-99e7-6b4757f4c617" name="Changes" comment="main2">
+    <list default="true" id="cb850aa0-fc08-42db-99e7-6b4757f4c617" name="Changes" comment="main3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +90,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648209496462</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="main2">
+      <created>1648209675291</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648209675291</updated>
+    </task>
+    <task id="LOCAL-00005" summary="main3">
+      <created>1648209786798</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648209786798</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,6 +122,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="main" />
     <MESSAGE value="main2" />
-    <option name="LAST_COMMIT_MESSAGE" value="main2" />
+    <MESSAGE value="main3" />
+    <option name="LAST_COMMIT_MESSAGE" value="main3" />
   </component>
 </project>
