@@ -60,5 +60,8 @@ public class Main {
                 break;
         }
         String input12 = in.nextLine();
+        if(input12.equals("exit")) {
+            System.exit(0);
+        }
     }
 }
