@@ -12,8 +12,19 @@ public class Main {
         Virologist virologist = new Virologist(t1,bag);
         return virologist;
     }
+    public static Virologist palpateInit(){
+        ForgetAgent forgetAgent = new ForgetAgent();
+        GeneticCode code = new GeneticCode(forgetAgent);
+        Tile t1 = new Laboratory(code);
+        Bag bag = new Bag();
+        Virologist virologist = new Virologist(t1,bag);
+
+        return virologist;
+    }
 
     public static void menu(){
+        Virologist virologist = null;
+
         System.out.println("Kérlek válassz az alábbi forgatókönyvek közül:");
         System.out.println("1. Move 2. Palpate 3. Collect 4. Use agent 5. Make agent 6. Expiring");
         Scanner in = new Scanner(System.in);
@@ -22,10 +33,12 @@ public class Main {
 
         switch (input){
             case 1:
-                Virologist virologist = moveInit();
+                virologist = moveInit();
                 virologist.Move(0);
                 break;
             case 2:
+                virologist = palpateInit();
+                virologist.PalpateWall();
                 break;
             case 3:
                 System.out.println("A földről vagy másik játékostól próbál felvenni valamit? (F / J)");

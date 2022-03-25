@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb850aa0-fc08-42db-99e7-6b4757f4c617" name="Changes" comment="main4">
+    <list default="true" id="cb850aa0-fc08-42db-99e7-6b4757f4c617" name="Changes" comment="move">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/GeneticCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/GeneticCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Laboratory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Laboratory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Shelter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Shelter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Simple.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Simple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Storage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Tile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Virologist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Virologist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GeneticCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GeneticCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Laboratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Laboratory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Tile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Virologist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Virologist.java" afterDir="false" />
@@ -115,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648210330730</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="move">
+      <created>1648211907762</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1648211907762</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +149,7 @@
     <MESSAGE value="main2" />
     <MESSAGE value="main3" />
     <MESSAGE value="main4" />
-    <option name="LAST_COMMIT_MESSAGE" value="main4" />
+    <MESSAGE value="move" />
+    <option name="LAST_COMMIT_MESSAGE" value="move" />
   </component>
 </project>

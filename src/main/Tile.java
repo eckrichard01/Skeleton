@@ -37,5 +37,5 @@ public abstract class Tile {
 		return null;
 	}
 	
-	public abstract Item GetCollectable();
+	public abstract Object GetCollectable();
 }

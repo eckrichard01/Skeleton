@@ -8,6 +8,7 @@ public class Virologist {
 	private double agentResistance;
 	private boolean throwBackAvailable;
 	private List<Effects> effects = new ArrayList<Effects>();
+	private List<GeneticCode> geneticCodes = new ArrayList<GeneticCode>();
 	private Bag bag;
 	private Tile tile;
 
@@ -34,12 +35,17 @@ public class Virologist {
 	}
 	
 	public void LearnCode(GeneticCode g) {
+		System.out.println("LearnCode(g: GeneticCode): void");
+		this.geneticCodes.add(g);
 	}
 	
 	public void CollectProtectiveGear() {
 	}
 	
 	public void PalpateWall() {
+		System.out.println("PalpateWall(): void");
+		GeneticCode geneticCode = (GeneticCode) tile.GetCollectable();
+		this.LearnCode(geneticCode);
 	}
 	
 	public void Wear(ProtectiveGear g) {
