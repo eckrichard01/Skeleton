@@ -3,6 +3,16 @@ package main;
 import java.util.Scanner;
 
 public class Main {
+    public static Virologist moveInit(){
+        Tile t1 = new Simple();
+        Tile t2 = new Simple();
+        t2.SetNeighbor(t1);
+        t1.SetNeighbor(t2);
+        Bag bag = new Bag();
+        Virologist virologist = new Virologist(t1,bag);
+        return virologist;
+    }
+
     public static void menu(){
         System.out.println("Kérlek válassz az alábbi forgatókönyvek közül:");
         System.out.println("1. Move 2. Palpate 3. Collect 4. Use agent 5. Make agent 6. Expiring");
@@ -12,13 +22,12 @@ public class Main {
 
         switch (input){
             case 1:
-                System.out.println("Move");
+                Virologist virologist = moveInit();
+                virologist.Move(0);
                 break;
             case 2:
-                System.out.println("Palpate");
                 break;
             case 3:
-                System.out.println("Collect");
                 System.out.println("A földről vagy másik játékostól próbál felvenni valamit? (F / J)");
                 String input1 = in.nextLine();
                 System.out.println("Mit vesz fel a játékos, védőfelszerelést vagy valamilyen anyagot? (V / A)");
@@ -31,7 +40,6 @@ public class Main {
                 String input4 = in.nextLine();
                 break;
             case 4:
-                System.out.println("Use agent");
                 System.out.println("Melyik ágenst szeretnéd használni: Vitustánc, Felejtős, Bénítás vagy Érinthetetlen? (V / F / B / E)");
                 String input5 = in.nextLine();
                 System.out.println("Magadon szeretnéd felhasználni? (I / N)");
@@ -50,12 +58,10 @@ public class Main {
                 }
                 break;
             case 5:
-                System.out.println("Make agent");
                 System.out.println("Rendelkezel az ágens elkészítéséhez szükséges kellő mennyiségű anyaggal? (I / N)");
                 String input10 = in.nextLine();
                 break;
             case 6:
-                System.out.println("Expiring");
                 System.out.println("Az ágens, aminek az ideje épp lejár fel lett használva valakin? (I / N)");
                 String input11 = in.nextLine();
                 break;

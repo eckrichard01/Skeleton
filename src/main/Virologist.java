@@ -7,11 +7,24 @@ public class Virologist {
 	private long codeCount;
 	private double agentResistance;
 	private boolean throwBackAvailable;
-	private Map map;
 	private List<Effects> effects = new ArrayList<Effects>();
 	private Bag bag;
 	private Tile tile;
+
+	public Virologist(Tile tile, Bag bag){
+		codeCount = 0;
+		throwBackAvailable = false;
+		agentResistance = 0;
+		this.bag = bag;
+		this.tile = tile;
+	}
+
 	public void Move(long n) {
+		System.out.println("move(n: long):");
+		Tile t2 = tile.GetNeighbor(n);
+		tile.Remove(this);
+		tile.Accept(this);
+		tile = t2;
 	}
 	
 	public void UseAgent(Virologist v, Agent a) {

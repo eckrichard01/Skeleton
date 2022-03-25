@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb850aa0-fc08-42db-99e7-6b4757f4c617" name="Changes" comment="main3">
+    <list default="true" id="cb850aa0-fc08-42db-99e7-6b4757f4c617" name="Changes" comment="main4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Virologist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Virologist.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Virologist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Virologist.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648209786798</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="main4">
+      <created>1648210330730</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1648210330730</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +134,7 @@
     <MESSAGE value="main" />
     <MESSAGE value="main2" />
     <MESSAGE value="main3" />
-    <option name="LAST_COMMIT_MESSAGE" value="main3" />
+    <MESSAGE value="main4" />
+    <option name="LAST_COMMIT_MESSAGE" value="main4" />
   </component>
 </project>
