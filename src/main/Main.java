@@ -59,5 +59,6 @@ public class Main {
                 String input11 = in.nextLine();
                 break;
         }
+        String input12 = in.nextLine();
     }
 }
