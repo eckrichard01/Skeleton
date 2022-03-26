@@ -10,11 +10,7 @@ public abstract class Tile {
 
 	public void Remove(Virologist v) {
 		System.out.println("Remove(v: Virologist)");
-		for(int i = 0; i < virologits.size(); i++){
-			if(virologits.get(i) == v) {
-				virologits.remove(i);
-			}
-		}
+		virologits.remove(v);
 	}
 	
 	public void Accept(Virologist v) {

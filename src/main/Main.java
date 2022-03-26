@@ -1,5 +1,7 @@
 package main;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -16,6 +18,40 @@ public class Main {
         ForgetAgent forgetAgent = new ForgetAgent();
         GeneticCode code = new GeneticCode(forgetAgent);
         Tile t1 = new Laboratory(code);
+        Bag bag = new Bag();
+        Virologist virologist = new Virologist(t1,bag);
+
+        return virologist;
+    }
+    private static Agent agenteInit() {
+        ForgetAgent forgetAgent = new ForgetAgent();
+        Bag bag = new Bag(forgetAgent);
+        forgetAgent.setBag(bag);
+        return forgetAgent;
+    }
+    private static GeneticCode createInit() {
+        Agent agent = new  ParalyzeAgent();
+        GeneticCode geneticCode = new GeneticCode(agent);
+        return geneticCode;
+    }
+    private static Virologist virologistInit() {
+        Bag bag = new Bag();
+        Virologist virologist = new Virologist(null, bag);
+        return virologist;
+    }
+    public static Virologist collectmInit(){
+        Material material = new Material();
+        List<Material> materials = new ArrayList<Material>();
+        materials.add(material);
+        Tile t1 = new Storage(materials);
+        Bag bag = new Bag();
+        Virologist virologist = new Virologist(t1,bag);
+
+        return virologist;
+    }
+    public static Virologist collectpgInit(){
+        ProtectiveGear protectiveGear = new Cape();
+        Tile t1 = new Shelter(protectiveGear);
         Bag bag = new Bag();
         Virologist virologist = new Virologist(t1,bag);
 
@@ -45,26 +81,65 @@ public class Main {
                 String input1 = in.nextLine();
                 System.out.println("Mit vesz fel a játékos, védőfelszerelést vagy valamilyen anyagot? (V / A)");
                 String input2 = in.nextLine();
-                if(input2.equals("V") || input2.equals("v")){
+                String input3 = null;
+                if(input2.equalsIgnoreCase("v")){
                     System.out.println("Van már ilyen védőfelszerelés a játékosnál? (I / N)");
-                    String input3 = in.nextLine();
+                    input3 = in.nextLine();
                 }
                 System.out.println("Van elég hely a játékos készletében? (I / N)");
                 String input4 = in.nextLine();
+                /**
+                 * Anyag, elég hellyel, földről
+                 */
+                if(input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("a") && input4.equalsIgnoreCase("i")){
+                    virologist = collectmInit();
+                    virologist.CollectMaterial(true);
+                }
+                /**
+                 * Anyag, nincs elég helye, földről
+                 */
+                else if(input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("a") && input4.equalsIgnoreCase("n")) {
+                    virologist = collectmInit();
+                    virologist.CollectMaterial(false);
+                }
+                /**
+                 * földröl, védőfelszerelés, van már ilyen felszerelése, van elég helye
+                 */
+                else if(input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("v") &&
+                        input3.equalsIgnoreCase("i") && input4.equalsIgnoreCase("i")){
+                    virologist = collectpgInit();
+                    virologist.CollectProtectiveGear(true, true);
+                }
+                /**
+                 * földröl, védőfelszerelés, nincs ilyen felszerelése, van elég helye
+                 */
+                else if(input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("v") &&
+                        input3.equalsIgnoreCase("n") && input4.equalsIgnoreCase("i")){
+                    virologist = collectpgInit();
+                    virologist.CollectProtectiveGear(false, true);
+                }
+                /**
+                 * földröl, védőfelszerelés, nincs elég helye
+                 */
+                else if(input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("v")
+                        && input4.equalsIgnoreCase("n")){
+                    virologist = collectpgInit();
+                    virologist.CollectProtectiveGear(false, false);
+                }
                 break;
             case 4:
                 System.out.println("Melyik ágenst szeretnéd használni: Vitustánc, Felejtős, Bénítás vagy Érinthetetlen? (V / F / B / E)");
                 String input5 = in.nextLine();
                 System.out.println("Magadon szeretnéd felhasználni? (I / N)");
                 String input6 = in.nextLine();
-                if(input6.equals("N") || input6.equals("n")){
+                if(input6.equalsIgnoreCase("N")){
                     System.out.println("Akire felkened, rendelkezik bármilyen védőfelszereléssel? (I / N)");
                     String input7 = in.nextLine();
-                    if(input7.equals("I") || input7.equals("i")){
+                    if(input7.equalsIgnoreCase("I")){
                         System.out.println("A védőfelszerelés az védőköpeny vagy kesztyű? (V / K)");
                         String input8 = in.nextLine();
                     }
-                    if(input7.equals("N") || input7.equals("n")){
+                    if(input7.equalsIgnoreCase("n")){
                         System.out.println("Akire felkened, védett érintés ellen? (I / N)");
                         String input9 = in.nextLine();
                     }
@@ -72,11 +147,27 @@ public class Main {
                 break;
             case 5:
                 System.out.println("Rendelkezel az ágens elkészítéséhez szükséges kellő mennyiségű anyaggal? (I / N)");
+                GeneticCode geneticCode = createInit();
+                virologist = virologistInit();
                 String input10 = in.nextLine();
+                if(input10.equalsIgnoreCase("i")) {
+                    geneticCode.CreateAgent(virologist, true);
+                }
+                else if(input10.equalsIgnoreCase("n")) {
+                    geneticCode.CreateAgent(virologist, false);
+                }
                 break;
             case 6:
                 System.out.println("Az ágens, aminek az ideje épp lejár fel lett használva valakin? (I / N)");
                 String input11 = in.nextLine();
+                if(input11.equalsIgnoreCase("n")) {
+                    Agent agent = agenteInit();
+                    agent.Step();
+                }
+                else if(input11.equalsIgnoreCase("i")) {
+                    Effects effects = new Paralyzed();
+                    effects.Step();
+                }
                 break;
         }
     }
