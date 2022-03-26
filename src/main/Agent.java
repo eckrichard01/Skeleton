@@ -8,7 +8,7 @@ public abstract class Agent extends Item implements Steppable {
 	public abstract void setStatus(long n, Virologist v);
 
 	/**
-	 *
+	 * Lépteti az időt amíg még felhasználható a vírus
 	 */
 	public void Step() {
 		System.out.println("Step(): void");
@@ -16,14 +16,14 @@ public abstract class Agent extends Item implements Steppable {
 		bag = null;
 	}
 
+	/**
+	 * Beállítja a táskát, amihez az ágens tartozik
+	 * @param bag a táska amit beállítunk
+	 */
 	public void setBag(Bag bag) {
 		this.bag = bag;
 	}
 
-	/**
-	 *
-	 * @return
-	 */
 	public ArrayList<Material> getNeededMaterials() {
 		return null;
 	}

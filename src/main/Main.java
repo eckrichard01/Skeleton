@@ -5,6 +5,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    /**
+     * A lépéshez szükséges osztályok példányosítása
+     * @return A virológus, akit léptetünk
+     */
     public static Virologist moveInit(){
         Tile t1 = new Simple();
         Tile t2 = new Simple();
@@ -14,6 +18,11 @@ public class Main {
         Virologist virologist = new Virologist(t1,bag);
         return virologist;
     }
+
+    /**
+     * A tapogatáshoz szükséges osztályok példányosítása
+     * @return A virológus, aki a tapogatást végzi
+     */
     public static Virologist palpateInit(){
         ForgetAgent forgetAgent = new ForgetAgent();
         GeneticCode code = new GeneticCode(forgetAgent);
@@ -23,22 +32,42 @@ public class Main {
 
         return virologist;
     }
+
+    /**
+     * A lejáró ágens példányosítása és elhelyezése a táskában
+     * @return A lejáró ágens
+     */
     private static Agent agenteInit() {
         ForgetAgent forgetAgent = new ForgetAgent();
         Bag bag = new Bag(forgetAgent);
         forgetAgent.setBag(bag);
         return forgetAgent;
     }
+
+    /**
+     * Egy ágens elkészítéséhez szükséges ágens és genetikai kód példányosítása
+     * @return A genetikai kód, ami segítségével léterehozzuk az ágenst
+     */
     private static GeneticCode createInit() {
         Agent agent = new  ParalyzeAgent();
         GeneticCode geneticCode = new GeneticCode(agent);
         return geneticCode;
     }
+
+    /**
+     * Egy virológus példányosítása, akinek van egy táskája, he mező nincs neki beállítva
+     * @return A virológus, akit majd használunk
+     */
     private static Virologist virologistInit() {
         Bag bag = new Bag();
         Virologist virologist = new Virologist(null, bag);
         return virologist;
     }
+
+    /**
+     * Egy anyag felvételéhez szükséges osztályok példányosítása
+     * @return A virológus, aki majd végzi a tevékenységet
+     */
     public static Virologist collectmInit(){
         Material material = new Material();
         List<Material> materials = new ArrayList<Material>();
@@ -49,6 +78,11 @@ public class Main {
 
         return virologist;
     }
+
+    /**
+     * Egy védőfelszerelés felvételéhez szükséges osztályok példányosítása
+     * @return A virológus, aki majd végzi a tevékenységet
+     */
     public static Virologist collectpgInit(){
         ProtectiveGear protectiveGear = new Cape();
         Tile t1 = new Shelter(protectiveGear);
@@ -58,6 +92,9 @@ public class Main {
         return virologist;
     }
 
+    /**
+     * A menü megvalósítására szolgáló függvény
+     */
     public static void menu(){
         Virologist virologist = null;
 
