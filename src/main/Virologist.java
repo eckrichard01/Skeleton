@@ -25,6 +25,16 @@ public class Virologist {
 		this.bag = bag;
 		this.tile = tile;
 	}
+	/**
+	 * A virológus egyik konstruktora
+	 * @param bag a táska, amitben tárolja a védőfelszerelését, anyagait és az ágenseket
+	 */
+	public Virologist(Bag bag){
+		codeCount = 1;
+		throwBackAvailable = false;
+		agentResistance = 0;
+		this.bag = bag;
+	}
 
 	/**
 	 * A viroloógus default kontruktora
@@ -42,8 +52,15 @@ public class Virologist {
 		tile.Accept(this);
 		tile = t2;
 	}
-	
+
+	/**
+	 * A virológus egy ágenst használ
+	 * @param v A virológus akire az ágenst felkenték
+	 * @param a A felkent ágens
+	 */
 	public void UseAgent(Virologist v, Agent a) {
+		System.out.println("UseAgent(v2, a)");
+		v.HitByAgent(a);
 	}
 	
 	public void TakeGear(Virologist from, ProtectiveGear g) {
@@ -94,8 +111,13 @@ public class Virologist {
 		g.setVirologist(this);
 		g.Wear();
 	}
-	
+
+	/**
+	 * A virológust felkenték egy ágensel
+	 * @param which A felkent ágens
+	 */
 	public void HitByAgent(Agent which) {
+		System.out.println("HitByAgent(a): void");
 	}
 	
 	public ProtectiveGear giveGear() {

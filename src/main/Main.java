@@ -55,7 +55,7 @@ public class Main {
     }
 
     /**
-     * Egy virológus példányosítása, akinek van egy táskája, he mező nincs neki beállítva
+     * Egy virológus példányosítása, akinek van egy táskája, ha mező nincs neki beállítva
      * @return A virológus, akit majd használunk
      */
     private static Virologist virologistInit() {
@@ -104,7 +104,7 @@ public class Main {
         int input = in.nextInt();
         String input0 = in.nextLine();
 
-        switch (input){
+        switch (input) {
             case 1:
                 virologist = moveInit();
                 virologist.Move(0);
@@ -119,7 +119,7 @@ public class Main {
                 System.out.println("Mit vesz fel a játékos, védőfelszerelést vagy valamilyen anyagot? (V / A)");
                 String input2 = in.nextLine();
                 String input3 = null;
-                if(input2.equalsIgnoreCase("v")){
+                if (input2.equalsIgnoreCase("v")) {
                     System.out.println("Van már ilyen védőfelszerelés a játékosnál? (I / N)");
                     input3 = in.nextLine();
                 }
@@ -128,58 +128,111 @@ public class Main {
                 /**
                  * Anyag, elég hellyel, földről
                  */
-                if(input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("a") && input4.equalsIgnoreCase("i")){
+                if (input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("a") && input4.equalsIgnoreCase("i")) {
                     virologist = collectmInit();
                     virologist.CollectMaterial(true);
                 }
                 /**
                  * Anyag, nincs elég helye, földről
                  */
-                else if(input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("a") && input4.equalsIgnoreCase("n")) {
+                else if (input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("a") && input4.equalsIgnoreCase("n")) {
                     virologist = collectmInit();
                     virologist.CollectMaterial(false);
                 }
                 /**
                  * földröl, védőfelszerelés, van már ilyen felszerelése, van elég helye
                  */
-                else if(input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("v") &&
-                        input3.equalsIgnoreCase("i") && input4.equalsIgnoreCase("i")){
+                else if (input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("v") &&
+                        input3.equalsIgnoreCase("i") && input4.equalsIgnoreCase("i")) {
                     virologist = collectpgInit();
                     virologist.CollectProtectiveGear(true, true);
                 }
                 /**
                  * földröl, védőfelszerelés, nincs ilyen felszerelése, van elég helye
                  */
-                else if(input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("v") &&
-                        input3.equalsIgnoreCase("n") && input4.equalsIgnoreCase("i")){
+                else if (input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("v") &&
+                        input3.equalsIgnoreCase("n") && input4.equalsIgnoreCase("i")) {
                     virologist = collectpgInit();
                     virologist.CollectProtectiveGear(false, true);
                 }
                 /**
                  * földröl, védőfelszerelés, nincs elég helye
                  */
-                else if(input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("v")
-                        && input4.equalsIgnoreCase("n")){
+                else if (input1.equalsIgnoreCase("f") && input2.equalsIgnoreCase("v")
+                        && input4.equalsIgnoreCase("n")) {
                     virologist = collectpgInit();
                     virologist.CollectProtectiveGear(false, false);
                 }
                 break;
             case 4:
+                Virologist virologist2 = new Virologist();
+                virologist = new Virologist();
                 System.out.println("Melyik ágenst szeretnéd használni: Vitustánc, Felejtős, Bénítás vagy Érinthetetlen? (V / F / B / E)");
                 String input5 = in.nextLine();
                 System.out.println("Magadon szeretnéd felhasználni? (I / N)");
                 String input6 = in.nextLine();
-                if(input6.equalsIgnoreCase("N")){
+                String input7 = null;
+                String input8 = null;
+                String input9 = null;
+                if (input6.equalsIgnoreCase("N")) {
                     System.out.println("Akire felkened, rendelkezik bármilyen védőfelszereléssel? (I / N)");
-                    String input7 = in.nextLine();
-                    if(input7.equalsIgnoreCase("I")){
+                    input7 = in.nextLine();
+                    if (input7.equalsIgnoreCase("I")) {
                         System.out.println("A védőfelszerelés az védőköpeny vagy kesztyű? (V / K)");
-                        String input8 = in.nextLine();
+                        input8 = in.nextLine();
                     }
-                    if(input7.equalsIgnoreCase("n")){
+                    if (input7.equalsIgnoreCase("n")) {
                         System.out.println("Akire felkened, védett érintés ellen? (I / N)");
-                        String input9 = in.nextLine();
+                        input9 = in.nextLine();
                     }
+                }
+                if (input5.equalsIgnoreCase("v") && input6.equalsIgnoreCase("i")) {
+                }
+                else if (input5.equalsIgnoreCase("v") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("v") ) {
+                    Agent v = new VitusDanceAgent();
+                    virologist.UseAgent(virologist2, v);
+                }
+                else if (input5.equalsIgnoreCase("v") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("k") ) {
+                }
+                else if (input5.equalsIgnoreCase("v") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("i") ) {
+                }
+                else if (input5.equalsIgnoreCase("v") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("n") ) {
+                }
+                else if (input5.equalsIgnoreCase("f") && input6.equalsIgnoreCase("i")) {
+                }
+                else if (input5.equalsIgnoreCase("f") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("v") ) {
+                    Agent f = new ForgetAgent();
+                    virologist.UseAgent(virologist2, f);
+                }
+                else if (input5.equalsIgnoreCase("f") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("k") ) {
+                }
+                else if (input5.equalsIgnoreCase("f") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("i") ) {
+                }
+                else if (input5.equalsIgnoreCase("f") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("n") ) {
+                }
+                else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("i")) {
+                }
+                else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("v") ) {
+                    Agent p = new ParalyzeAgent();
+                    virologist.UseAgent(virologist2, p);
+                }
+                else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("k") ) {
+                }
+                else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("i") ) {
+                }
+                else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("n") ) {
+                }
+                else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("i")) {
+                }
+                else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("v") ) {
+                    Agent u = new UntouchableAgent();
+                    virologist.UseAgent(virologist2, u);
+                }
+                else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("k") ) {
+                }
+                else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("i") ) {
+                }
+                else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("n") ) {
                 }
                 break;
             case 5:
@@ -187,21 +240,19 @@ public class Main {
                 GeneticCode geneticCode = createInit();
                 virologist = virologistInit();
                 String input10 = in.nextLine();
-                if(input10.equalsIgnoreCase("i")) {
+                if (input10.equalsIgnoreCase("i")) {
                     geneticCode.CreateAgent(virologist, true);
-                }
-                else if(input10.equalsIgnoreCase("n")) {
+                } else if (input10.equalsIgnoreCase("n")) {
                     geneticCode.CreateAgent(virologist, false);
                 }
                 break;
             case 6:
                 System.out.println("Az ágens, aminek az ideje épp lejár fel lett használva valakin? (I / N)");
                 String input11 = in.nextLine();
-                if(input11.equalsIgnoreCase("n")) {
+                if (input11.equalsIgnoreCase("n")) {
                     Agent agent = agenteInit();
                     agent.Step();
-                }
-                else if(input11.equalsIgnoreCase("i")) {
+                } else if (input11.equalsIgnoreCase("i")) {
                     Effects effects = new Paralyzed();
                     effects.Step();
                 }
