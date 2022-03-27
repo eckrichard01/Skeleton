@@ -34,11 +34,19 @@ public class Bag {
 		System.out.println("Discard(a: Agent): void");
 		agents.remove(a);
 	}
+	/**
+	 * Kiveszi a listából a védőfelszerelést. Ezt nem helyezi sehova, a tárgy megsemmisül.
+	 * @param g A kivenni kívánt ágens
+	 */
 	public void Discard(ProtectiveGear g) {
-
+		System.out.println("Discard(g: ProtectiveGear): void");
 	}
+	/**
+	 * Kiveszi a listából az anyagot. Ezt nem helyezi sehova, a tárgy megsemmisül.
+	 * @param m A kivenni kívánt ágens
+	 */
 	public void Discard(Material m) {
-
+		System.out.println("Discard(m: Material): void");
 	}
 
 	/**
