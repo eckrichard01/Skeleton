@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb850aa0-fc08-42db-99e7-6b4757f4c617" name="Changes" comment="1-11 szekvencia">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Agent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Bag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Bag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Effects.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Effects.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/GeneticCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/GeneticCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Laboratory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Laboratory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/ProtectiveGear.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/ProtectiveGear.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Shelter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Shelter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Storage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Tile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/main/Virologist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/main/Virologist.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Virologist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Virologist.java" afterDir="false" />
     </list>
@@ -55,6 +45,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../projlab/proba/Skeleton" />
     <property name="settings.editor.selected.configurable" value="build.tools" />
   </component>
@@ -170,6 +161,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="main" />

@@ -54,6 +54,15 @@ public class Virologist {
 	}
 
 	/**
+	 * A virológus érinthetetlen effektjét adja vissza
+	 */
+	public boolean getUntouchable()
+	{
+		System.out.println("getUntouchable(): bool");
+		return true;
+	}
+
+	/**
 	 * A virológus egy ágenst használ
 	 * @param v A virológus akire az ágenst felkenték
 	 * @param a A felkent ágens

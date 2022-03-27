@@ -186,52 +186,143 @@ public class Main {
                         input9 = in.nextLine();
                     }
                 }
+
+                /**10-Virologist using VitusDanceAgent on himself*/
                 if (input5.equalsIgnoreCase("v") && input6.equalsIgnoreCase("i")) {
+                    VitusDanceAgent v= new VitusDanceAgent();
+                    virologist.UseAgent(virologist,v);
+                    virologist.HitByAgent(v);
+                    v.setStatus(60,virologist);
+                    VitusDance e=new VitusDance();
+                    e.setTimeEffected(60);
                 }
+
+                /**11-Virologist using VitusDanceAgent on other virologist who has a cape*/
                 else if (input5.equalsIgnoreCase("v") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("v") ) {
-                    Agent v = new VitusDanceAgent();
+                    VitusDanceAgent v = new VitusDanceAgent();
                     virologist.UseAgent(virologist2, v);
                 }
+
+                /**12-Virologist using VitusDanceAgent on other virologist who has a glove*/
                 else if (input5.equalsIgnoreCase("v") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("k") ) {
+                    VitusDanceAgent v = new VitusDanceAgent();
+                    virologist.UseAgent(virologist2, v);
+                    virologist2.HitByAgent(v);
+                    Glove g=new Glove();
+                    g.throwBack(virologist,v);
+                    virologist.HitByAgent(v);
+                    v.setStatus(60,virologist);
+                    VitusDance e=new VitusDance();
+                    e.setTimeEffected(60);
                 }
+
+                /**13-Virologist using VitusDanceAgent on other virologist who has untouchable effect*/
                 else if (input5.equalsIgnoreCase("v") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("i") ) {
+                    VitusDanceAgent v = new VitusDanceAgent();
+                    virologist.UseAgent(virologist2, v);
+                    virologist2.getUntouchable();
                 }
+
+                /**14-Virologist using VitusDanceAgent on other virologist without any effect or gear*/
                 else if (input5.equalsIgnoreCase("v") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("n") ) {
+                    VitusDanceAgent v= new VitusDanceAgent();
+                    virologist.UseAgent(virologist2,v);
+                    virologist2.HitByAgent(v);
+                    v.setStatus(60,virologist2);
+                    VitusDance e=new VitusDance();
+                    e.setTimeEffected(60);
                 }
+
+                /**15-Virologist using ForgetAgent on himself*/
                 else if (input5.equalsIgnoreCase("f") && input6.equalsIgnoreCase("i")) {
+                    ForgetAgent f= new ForgetAgent();
+                    virologist.UseAgent(virologist,f);
+                    virologist.HitByAgent(f);
+                    f.setStatus(60,virologist);
+                    f.takeAwayCode(virologist);
                 }
+
+                /**16-Virologist using ForgetAgent on other virologist who has a cape*/
                 else if (input5.equalsIgnoreCase("f") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("v") ) {
                     Agent f = new ForgetAgent();
                     virologist.UseAgent(virologist2, f);
                 }
+
+                /**17-Virologist using ForgetAgent on other virologist who has a glove*/
                 else if (input5.equalsIgnoreCase("f") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("k") ) {
+                    ForgetAgent f= new ForgetAgent();
+                    virologist.UseAgent(virologist2,f);
+                    virologist2.HitByAgent(f);
+                    Glove g=new Glove();
+                    g.throwBack(virologist,f);
+                    virologist.HitByAgent(f);
+                    f.setStatus(60,virologist);
+                    f.takeAwayCode(virologist);
                 }
+
+                /**18-Virologist using ForgetAgent on other virologist who has untouchable effect*/
                 else if (input5.equalsIgnoreCase("f") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("i") ) {
+                    ForgetAgent f = new ForgetAgent();
+                    virologist.UseAgent(virologist2, f);
+                    virologist2.getUntouchable();
                 }
+
+                /**19-Virologist using ForgetAgent on other virologist without any effect or gear*/
                 else if (input5.equalsIgnoreCase("f") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("n") ) {
+                    ForgetAgent f= new ForgetAgent();
+                    virologist.UseAgent(virologist2,f);
+                    virologist2.HitByAgent(f);
+                    f.setStatus(60,virologist2);
+                    f.takeAwayCode(virologist2);
                 }
+
+                /**20-Virologist using ParalyzeAgent on himself*/
                 else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("i")) {
+                    ParalyzeAgent b= new ParalyzeAgent();
+                    virologist.UseAgent(virologist,b);
+                    virologist.HitByAgent(b);
+                    b.setStatus(60,virologist);
+                    Paralyzed e=new Paralyzed();
+                    e.setTimeEffected(60);
                 }
+
+                /**21-Virologist using ParalyzeAgent on other virologist who has a cape*/
                 else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("v") ) {
                     Agent p = new ParalyzeAgent();
                     virologist.UseAgent(virologist2, p);
                 }
+
+                /**22-Virologist using ParalyzeAgent on other virologist who has a glove*/
                 else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("k") ) {
                 }
+
+                /**23-Virologist using ParalyzeAgent on other virologist who has untouchable effect*/
                 else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("i") ) {
                 }
+
+                /**24-Virologist using ParalyzeAgent on other virologist without any effect or gear*/
                 else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("n") ) {
                 }
+
+                /**25-Virologist using UntouchableAgent on himself*/
                 else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("i")) {
                 }
+
+                /**26-Virologist using UntouchableAgent on other virologist who has a cape*/
                 else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("v") ) {
                     Agent u = new UntouchableAgent();
                     virologist.UseAgent(virologist2, u);
                 }
+
+                /**27-Virologist using UntouchableAgent on other virologist who has a glove*/
                 else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("k") ) {
                 }
+
+                /**28-Virologist using UntouchableAgent on other virologist who has untouchable effect*/
                 else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("i") ) {
                 }
+
+                /**29-Virologist using UntouchableAgent on other virologist without any effect or gear*/
                 else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("n") ) {
                 }
                 break;
@@ -240,19 +331,29 @@ public class Main {
                 GeneticCode geneticCode = createInit();
                 virologist = virologistInit();
                 String input10 = in.nextLine();
+
+                /**30-Virologist makes agent with enough material*/
                 if (input10.equalsIgnoreCase("i")) {
                     geneticCode.CreateAgent(virologist, true);
-                } else if (input10.equalsIgnoreCase("n")) {
+                }
+
+                /**31-Virologist makes agent without enough material*/
+                else if (input10.equalsIgnoreCase("n")) {
                     geneticCode.CreateAgent(virologist, false);
                 }
                 break;
             case 6:
                 System.out.println("Az ágens, aminek az ideje épp lejár fel lett használva valakin? (I / N)");
                 String input11 = in.nextLine();
+
+                /**32-Agent in inventory expiring*/
                 if (input11.equalsIgnoreCase("n")) {
                     Agent agent = agenteInit();
                     agent.Step();
-                } else if (input11.equalsIgnoreCase("i")) {
+                }
+
+                /**33-Used agent in inventory expiring*/
+                else if (input11.equalsIgnoreCase("i")) {
                     Effects effects = new Paralyzed();
                     effects.Step();
                 }
