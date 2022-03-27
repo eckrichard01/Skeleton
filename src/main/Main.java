@@ -294,18 +294,42 @@ public class Main {
 
                 /**22-Virologist using ParalyzeAgent on other virologist who has a glove*/
                 else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("k") ) {
+                    ParalyzeAgent v = new ParalyzeAgent();
+                    virologist.UseAgent(virologist2, v);
+                    virologist2.HitByAgent(v);
+                    Glove g=new Glove();
+                    g.throwBack(virologist,v);
+                    virologist.HitByAgent(v);
+                    v.setStatus(60,virologist);
+                    Paralyzed e=new Paralyzed();
+                    e.setTimeEffected(60);
                 }
 
                 /**23-Virologist using ParalyzeAgent on other virologist who has untouchable effect*/
                 else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("i") ) {
+                    ParalyzeAgent v = new ParalyzeAgent();
+                    virologist.UseAgent(virologist2, v);
+                    virologist2.getUntouchable();
                 }
 
                 /**24-Virologist using ParalyzeAgent on other virologist without any effect or gear*/
                 else if (input5.equalsIgnoreCase("b") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("n") ) {
+                    ParalyzeAgent v= new ParalyzeAgent();
+                    virologist.UseAgent(virologist2,v);
+                    virologist2.HitByAgent(v);
+                    v.setStatus(60,virologist2);
+                    Paralyzed e=new Paralyzed();
+                    e.setTimeEffected(60);
                 }
 
                 /**25-Virologist using UntouchableAgent on himself*/
                 else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("i")) {
+                    UntouchableAgent b= new  UntouchableAgent();
+                    virologist.UseAgent(virologist,b);
+                    virologist.HitByAgent(b);
+                    b.setStatus(60,virologist);
+                    Untouchable e=new  Untouchable();
+                    e.setTimeEffected(60);
                 }
 
                 /**26-Virologist using UntouchableAgent on other virologist who has a cape*/
@@ -316,14 +340,32 @@ public class Main {
 
                 /**27-Virologist using UntouchableAgent on other virologist who has a glove*/
                 else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("i") && input8.equalsIgnoreCase("k") ) {
+                    UntouchableAgent v = new UntouchableAgent();
+                    virologist.UseAgent(virologist2, v);
+                    virologist2.HitByAgent(v);
+                    Glove g=new Glove();
+                    g.throwBack(virologist,v);
+                    virologist.HitByAgent(v);
+                    v.setStatus(60,virologist);
+                    Untouchable e=new Untouchable();
+                    e.setTimeEffected(60);
                 }
 
                 /**28-Virologist using UntouchableAgent on other virologist who has untouchable effect*/
                 else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("i") ) {
+                    UntouchableAgent v = new UntouchableAgent();
+                    virologist.UseAgent(virologist2, v);
+                    virologist2.getUntouchable();
                 }
 
                 /**29-Virologist using UntouchableAgent on other virologist without any effect or gear*/
                 else if (input5.equalsIgnoreCase("e") && input6.equalsIgnoreCase("n") && input7.equalsIgnoreCase("n") && input9.equalsIgnoreCase("n") ) {
+                    UntouchableAgent v = new UntouchableAgent();
+                    virologist.UseAgent(virologist2,v);
+                    virologist2.HitByAgent(v);
+                    v.setStatus(60,virologist2);
+                    Untouchable e=new Untouchable();
+                    e.setTimeEffected(60);
                 }
                 break;
             case 5:
