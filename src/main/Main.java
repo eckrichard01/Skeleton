@@ -10,8 +10,8 @@ public class Main {
      * @return A virológus, akit léptetünk
      */
     public static Virologist moveInit(){
-        Tile t1 = new Simple();
-        Tile t2 = new Simple();
+        Tile t1 = new Tile();
+        Tile t2 = new Tile();
         t2.SetNeighbor(t1);
         t1.SetNeighbor(t2);
         Bag bag = new Bag();

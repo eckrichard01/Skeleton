@@ -3,7 +3,7 @@ package main;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Tile {
+public class Tile {
 	private long capacity;
 	private List<Tile> adjacentTiles = new ArrayList<Tile>();
 	private List<Virologist> virologits = new ArrayList<Virologist>();
@@ -50,5 +50,7 @@ public abstract class Tile {
 		return null;
 	}
 	
-	public abstract Object GetCollectable();
+	public Object GetCollectable(){
+		return null;
+	}
 }
